@@ -1,3 +1,22 @@
+function getInputValue(getId) {
+    const inputField = document.getElementById(getId)
+    const inputText = inputField.value;
+    const inputValue = parseFloat(inputText)
+    inputField.value = " "
+    return inputValue;
+
+}
+
+
+function displayShow(calculateName, areaValue) {
+    const areaDisplay = document.getElementById('areaCalculationDisplay')
+    const li = document.createElement('li')
+    li.innerText = `${calculationList}. ${calculateName} ${areaValue} cm² `;
+    areaDisplay.appendChild(li)
+
+}
+
+
 let calculationList = 0;
 
 
@@ -16,30 +35,35 @@ function triangleCalculateGetValue() {
         calculationList++
 
 
-        const areaDisplay = document.getElementById('areaCalculationDisplay')
-        const li = document.createElement('li')
-        li.innerText = `${calculationList}. Triangle ${area} cm² `;
+        // const areaDisplay = document.getElementById('areaCalculationDisplay')
+        // const li = document.createElement('li')
+        // li.innerText = `${calculationList}.  ${area} cm² `;
+        // areaDisplay.appendChild(li)
 
+        // Area Calculation Show
+        displayShow("Triangle", area)
 
-        areaDisplay.appendChild(li)
+    }
+}
 
+function rectangleCalculateGetValue() {
+    const width = getInputValue('reactangaleWidth')
 
+    const length = getInputValue('reactangaleLength')
 
-        console.log(area)
+    if (isNaN(width) || isNaN(length)) {
+        alert("Chack Value Field")
+        return
+    } else {
+        const area = width * length;
+
+        calculationList++
+
+        // Area Calculation Show
+        displayShow("Rectangle", area)
 
     }
 
-
-
 }
 
 
-
-function getInputValue(getId) {
-    const inputField = document.getElementById(getId)
-    const inputText = inputField.value;
-    const inputValue = parseFloat(inputText)
-    inputField.value = " "
-    return inputValue;
-
-}

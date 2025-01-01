@@ -58,17 +58,19 @@
                         <div class="card border rounded-lg text-center p-4 md:p-10 space-y-4">
                             <img class="w-full h-48 p-4" src="./images/rectangle.png" alt="Triangle Image">
                             <div class="space-y-2">
-                                <h2 class="text-2xl">Triangle</h2>
-                                <p>Area (A) = 0.5 x b x h </p>
+                                <h2 class="text-2xl">Rectangle</h2>
+                                <p>Area (A) = w x l </p>
                                 <div class="md:flex items-center justify-around  md:gap-4 md:mb-8">
-                                    <input class="bg-gray-50 text-black md:w-24 rounded-lg px-2 py-2 outline-none"
-                                        type="text" placeholder="Base">
+                                    <input id="reactangaleWidth"
+                                        class="bg-gray-50 text-black md:w-24 rounded-lg px-2 py-2 outline-none"
+                                        type="text" placeholder="w">
                                     <span>cm</span>
-                                    <input class="bg-gray-50 text-black md:w-24 rounded-lg px-2 py-2 outline-none"
-                                        type="text" placeholder="height"> <span>cm</span>
+                                    <input id="reactangaleLength"
+                                        class="bg-gray-50 text-black md:w-24 rounded-lg px-2 py-2 outline-none"
+                                        type="text" placeholder="l"> <span>cm</span>
                                 </div>
                             </div>
-                            <button class=" w-full px-12 py-4 bg-[#1090D8] text-xl rounded rounded-lg text-white
+                            <button onclick="rectangleCalculateGetValue()" class=" w-full px-12 py-4 bg-[#1090D8] text-xl rounded rounded-lg text-white
                                 font-bold">Calculate</button>
                         </div>
                         <!-- Card-3 -->
