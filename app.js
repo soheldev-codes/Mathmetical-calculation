@@ -86,3 +86,27 @@ function parallelogramCalculateGetValue() {
 }
 
 
+function rhombusCalculateGetValue() {
+    const base = getInputValue('rhombusBase')
+
+    const height = getInputValue('rhombusHeight')
+
+    if (isNaN(base) || isNaN(height)) {
+        alert("Chack Input Field")
+        return
+    } else {
+        const area = 0.5 * base * height;
+
+        calculationList++
+
+        // Area Calculation Show
+        displayShow("Rhombus", area)
+
+    }
+
+}
+
+
+
+
+
