@@ -65,5 +65,24 @@ function rectangleCalculateGetValue() {
     }
 
 }
+function parallelogramCalculateGetValue() {
+    const base = getInputValue('parallelogramBase')
+
+    const height = getInputValue('parallelogramHeight')
+
+    if (isNaN(base) || isNaN(height)) {
+        alert("Chack Value Field")
+        return
+    } else {
+        const area = base * height;
+
+        calculationList++
+
+        // Area Calculation Show
+        displayShow("parallelogram", area)
+
+    }
+
+}
 
 
